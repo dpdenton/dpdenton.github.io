@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>David Denton Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+
+<style>
+
+    body {
+        font-family: "Open Sans";
+        font-weight: 100;
+    }
+
+    h1, h2, h3, p, a {
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    a {
+        color: black
+    }
+
+    .textCenter {
+        text-align: center;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 480px;
+    }
+
+    .container h1 {
+        margin: 50px 0
+    }
+
+    .tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        background-color: #fff;
+    }
+
+    .tabs .tab {
+        font-size: 20px;
+        padding: 5px 0;
+        border-bottom: thin solid transparent;
+
+    }
+
+    .tabs .tab:hover {
+        cursor: pointer;
+    }
+
+    .tabs .tab.selected {
+        border-bottom-color: #000;
+    }
+
+    .tabContent {
+        display: none;
+        /*min-height: 1000px;*/
+    }
+
+    .tabContent.selected {
+        display: block;
+
+    }
+
+    .items {
+        margin: auto;
+    }
+
+    .item {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: thin solid whitesmoke;
+    }
+
+    .item:last-child {
+        border-bottom: none;
+    }
+
+    .item .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .item .links .link {
+        margin-right: 10px
+    }
+
+    .item .thumb {
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .item .description {
+        margin-top: 15px;
+        font-style: italic;
+    }
+
+    .item .infoItem {
+        margin-top: 15px
+    }
+
+    .item .infoItem span {
+        font-weight: 400;
+    }
+
+</style>
+
+<div class="container">
+
+
+    <h1 class="textCenter">Portfolio</h1>
+
+    <ul id="tabs" class="tabs">
+        <li id="tab_1" class="tab" data-tabid="1">Web Apps</li>
+        <li id="tab_2" class="tab" data-tabid="2">Apps</li>
+        <li id="tab_3" class="tab" data-tabid="3">Websites</li>
+        <li id="tab_4" class="tab" data-tabid="4">Projects</li>
+    </ul>
+
+    <div class="tabContents">
+
+        <!-- Web Apps -->
+        <div id="tabContent_1" class="tabContent">
+
+            <ul class="items">
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/sliced.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Sliced</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://sliced.co" target="_blank">sliced.co</a>
+                                </span>
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/sliced-client"
+                                       target="_blank">/client</a>
+                                </span>
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/sliced-server"
+                                       target="_blank">/server</a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Single Page Application recipe finder with custom ChatBot to help find the perfect dish.
+                    </p>
+                    <p class="description">Note: Access to these repositories can be granted upon request.</p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Work:</span> Frontend Development, Backend Development</li>
+                        <li class="infoItem"><span>Backend Tech:</span> Postgres, Python, Django</li>
+                        <li class="infoItem"><span>Frontend Tech:</span> React, Redux, SASS</li>
+                        <li class="infoItem"><span>Key Challenges:</span> Creating pretty urls for every filter
+                            combination to combat SEO issues and enable link sharing.
+                        </li>
+                        <li class="infoItem"><span>Highlights:</span> Comprehensive caching minimising hits on the db.
+                            API response time < 30ms for complex queries. URL driven filtering.
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/hubbite.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Hubbite</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://hubbite.com" target="_blank">hubbite.com</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Social reviews SPA. Follow friends and influencers to see what they're recommending what to
+                        avoid. Rate anything: places, books, film, tv, music and even people.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem">
+                            <span>Work:</span> Frontend Development, Backend Development
+                        </li>
+                        <li class="infoItem">
+                            <span>Backend Stack:</span> Postgres, NodeJS, Express, Sequelize
+                        </li>
+                        <li class="infoItem">
+                            <span>Frontend Stack:</span> React, Redux, Typescript, SASS
+                        </li>
+                        <li class="infoItem">
+                            <span>Key Challenges:</span> Maintaining complex SQL queries
+                        </li>
+                        <li class="infoItem">
+                            <span>Highlights:</span> Custom ORM to build complex composable SQL queries, minimising
+                            duplicate code and improving maintainability.
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/adstart.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">AdStart</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://adstart.io" target="_blank">adstart.io</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        AdStart automatically creates highly targeted ads which deep link to product/service pages by
+                        extracting data
+                        from the target site and rendering the ads through a set of highly configurable rules.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Work:</span> Concept, Design, Development, Branding, Copy</li>
+                        <li class="infoItem"><span>Stack:</span> Postgres, Python, Django, Bootstrap, JQuery</li>
+                        <li class="infoItem"><span>Key Challenges:</span> Too many to mention
+                        </li>
+                        <li class="infoItem"><span>Highlights:</span> Creating a campaign for modedesigns.co.uk that was
+                            profitable for over a year without any maintenance.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Apps -->
+        <div id="tabContent_2" class="tabContent">
+
+            <ul class="items">
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/newsdrop.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">NewsDrop</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://play.google.com" target="_blank">newsdrop.app</a>
+                                </span>
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://play.google.com" target="_blank">/client</a>
+                                </span>
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://play.google.com" target="_blank">/server</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Android App allowing users to share any web page in a single swipe and chat about it within the
+                        browser.
+                        Mainly built to get familiar with Android / Java.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Work:</span> Concept, Design, Development</li>
+                        <li class="infoItem"><span>Stack:</span> Android, SQLite, NodeJS, Firebase</li>
+                        <li class="infoItem">
+                            <span>Key Challenges:</span> Syncing local and remote data. Parsing AMP web pages. Storing
+                            and delivering data to user who haven't installed the app and then install the app.
+                        </li>
+                        <li class="infoItem">
+                            <span>Highlights:</span> It works.
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Websites -->
+        <div id="tabContent_3" class="tabContent">
+
+            <ul class="items">
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/mode.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Mode Designs</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://www.modedesigns.co.uk" target="_blank">modedesigns.co.uk</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Furniture ecommerce store with custom modules to assist stock management.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem">Work: Concept, Design, Development, Branding, Copy</li>
+                        <li class="infoItem">Stack: MySQL, PHP, Magento, Bootstrap, JQuery</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/medex.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Medex Research</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="http://www.medexresearch.com/" target="_blank">medexresearch.com</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Rework of existing site design based on client's specs. Content managed backend with custom
+                        models.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Work:</span> Design, Development</li>
+                        <li class="infoItem"><span>Stack:</span> Postgres, Python, Django</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Projects -->
+        <div id="tabContent_4" class="tabContent">
+
+            <ul class="items">
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/wordpress.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Form2Webservice</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://norwichcarfinance.co.uk/application" target="_blank">
+                                        norwichcarfinance.co.uk
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Wordpress Plugin which parses and structures form data
+                        to send to multiple webservices in the financial sector.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> PHP, Wordpress, Javascript</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">React File Uploader</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/react-file-uploader" target="_blank">
+                                        /react-file-uploader
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        A flexible React component for uploading files. Supports multiple files, progress feedback and
+                        upload / abort controls.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Javascript, React</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">TimeDelta</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/timedelta" target="_blank">
+                                        /timedelta
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Helper class to compare two timestamps.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Javascript</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">DOORM</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/doorm" target="_blank">
+                                        /doorm
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        SQL-first serializer to help build and maintain complex SQL queries.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Typescript</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Behavioural Cloning</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/CarND-Behavioral-Cloning" target="_blank">
+                                        /behaviour-cloning
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Using deep neural networks and convolutional neural networks to clone driving behavior as part
+                        of the Udacity Self-driving car Nanodegree.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Python, Keras</li>
+                    </ul>
+                </li>
+
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Vehicle Detection</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/Vehicle-Detection" target="_blank">
+                                        /vehicle-detection
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Using deep neural networks and convolutional neural networks to clone driving behavior. Part
+                        of the Udacity Self-driving car Nanodegree.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Python, SciPy</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Advanced Lane Detection</h2>
+
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/CarND-Advanced-Lane-Lines" target="_blank">
+                                        /advanced-lane-detection
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        A pipeline to identify the lane boundaries in a video. Part
+                        of the Udacity Self-driving car Nanodegree.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Python, SciPi</li>
+                    </ul>
+                </li>
+
+                <li class="item">
+                    <div class="header">
+                        <img
+                                class="thumb"
+                                src="./img/github.png"
+                        />
+                        <div class="titleWrapper">
+                            <h2 class="title">Traffic Sign Classifier</h2>
+                            <div class="links">
+                                <span class="link">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/dpdenton/CarND-Traffic-Sign-Classifier-Project"
+                                       target="_blank">
+                                        /traffic-sign-classifier
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="description">
+                        Use deep neural networks and convolutional neural networks to classify traffic signs. Part
+                        of the Udacity Self-driving car Nanodegree.
+                    </p>
+                    <ul class="infoItems">
+                        <li class="infoItem"><span>Tech:</span> Python, Keras</li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+
+    var SELECTED_CLASS = "selected";
+    var TAB_PREFIX = "tab_";
+    var TAB_CONTENT_PREFIX = "tabContent_";
+
+    function removeSelections(className) {
+        var elements = document.getElementsByClassName(className);
+        for (var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+            element.classList.remove(SELECTED_CLASS);
+        }
+    }
+
+    function addSelection(id) {
+        var element = document.getElementById(id);
+        element.classList.add(SELECTED_CLASS);
+    }
+
+    function onTabClick(tabId) {
+
+        removeSelections('tab');
+        removeSelections('tabContent');
+
+        addSelection(TAB_PREFIX + tabId);
+        addSelection(TAB_CONTENT_PREFIX + tabId);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var isFixed = false;
+
+        var tabElement = document.getElementsByClassName('tabs')[0];
+        var containerElement = document.getElementsByClassName('container')[0];
+        var contentsElement = document.getElementsByClassName('tabContents')[0];
+        var tabPosition = tabElement.getBoundingClientRect();
+        var containerPosition = containerElement.getBoundingClientRect();
+
+        contentsElement.style.paddingTop = '50px';
+
+        window.addEventListener('scroll', function (e) {
+
+            if (!isFixed && window.scrollY > tabPosition.top) {
+                tabElement.style.position = 'fixed';
+                tabElement.style.top = 0;
+                tabElement.style.width = containerPosition.width + 'px';
+                contentsElement.style.paddingTop = 50 + tabPosition.height + 'px';
+                isFixed = true;
+            }
+
+            if (isFixed && window.scrollY < tabPosition.top) {
+                tabElement.removeAttribute("style");
+                contentsElement.style.paddingTop = '50px';
+                isFixed = false;
+            }
+        });
+
+        var tabs = document.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            (function () {
+                var tab = tabs[i];
+                tab.addEventListener('click', function () {
+                    onTabClick(tab.dataset.tabid)
+                }, false)
+            })();
+        }
+
+        addSelection(TAB_PREFIX + 1);
+        addSelection(TAB_CONTENT_PREFIX + 1);
+    })
+
+</script>
+
+</html>
